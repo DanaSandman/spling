@@ -42,7 +42,7 @@ export function orderCompleted(orderDetails) {
     return async dispatch => {
         try {
             const orderId = await orderService.saveOrder(orderDetails);
-            const cardComLink = await orderService.charge('testp', 105.2, orderId);
+            const cardComLink = await orderService.charge('spling', 49, orderId);
             const lowProfile = getLowProfileCode(cardComLink);
             orderService.updateOrder({
                 orderId,
