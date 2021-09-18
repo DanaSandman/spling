@@ -2,3 +2,11 @@
     height: 75vh;
     text-align: center;
 }
+.main-img{
+    max-width: 480px;     
+}
+@media only screen and (max-width: 768px) {
+    .main-img{
+        max-width: 90%;
+     }
+  }
