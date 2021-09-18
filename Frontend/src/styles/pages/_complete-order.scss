@@ -1,0 +1,19 @@
+.complete-order{
+    margin-top: 1.25rem;
+   padding-left: 1.25rem;
+    width: 95%;
+    height: 65vh;
+    text-align: end;
+}
+.user-details, .order-details{
+    border: 1px solid $clr1;
+    padding: .4rem;
+}
+.order-details, .user-details{
+    margin-bottom: 1rem;
+}
+.link-to-order{
+    font-family: 'Comic Sans MS Bold';
+    font-weight: bold;
+    margin: 0px;
+}

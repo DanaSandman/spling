@@ -2,7 +2,6 @@
 @import './setup/variables.scss';
 @import './setup/typography.scss';
 @import './setup/mixins.scss';
-@import './setup/functions.scss';
 
 //BASICS
 @import './basics/base.scss';
@@ -12,7 +11,10 @@
 //CMPS
 @import './cmps/footer.scss';
 @import './cmps/header.scss';
+@import './cmps/order-form.scss';
 
 //PAGES
 @import './pages/home.scss';
+@import './pages/order.scss';
+@import './pages/complete-order.scss';
 @import './pages/payment-success.scss';

@@ -10,7 +10,6 @@ import { Header } from "../cmps/Header.jsx";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    // margin: theme.spacing(1),
     backgroundColor: "#9469dd",
     margin: "0px",
   },
@@ -61,11 +60,9 @@ export function CompleteOrder() {
           <LongTxt description={address} />
         </div>
       </div>
-      {/* <div> */}
       <Button variant="contained" className={classes.button} disableElevation>
         <Link to="/payment"> 〱 מעבר לתשלום</Link>
       </Button>
-      {/* </div> */}
     </Fragment>
   );
 }
