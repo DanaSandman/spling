@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 
 import { routes } from "./routes.js";
-import { Header } from "./cmps/Header.jsx";
 import { Footer } from "./cmps/Footer.jsx";
 
 import "./styles/App.scss";
@@ -16,7 +15,6 @@ export function App() {
   return (
     <Router>
       <div className="app">
-        <Header/>
         <main>
           <Switch>
             <div className="main-container">
