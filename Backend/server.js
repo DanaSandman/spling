@@ -20,7 +20,7 @@ app.use(session)
 
 if (process.env.NODE_ENV === 'production') {
 //Route production- public to server
-    app.use(express.static(path.resolve(__dirname, 'public')))
+    app.use(express.static('public'))
 } else {
 //Route Development- domain 8080 to server    
     const corsOptions = {
@@ -37,7 +37,7 @@ const orderRoutes = require('./api/order/order.routes')
 app.use('/api/order', orderRoutes)
 
 //If no routes get the HTML from public
-app.get('/', (req, res) => {
+app.get('/**', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
@@ -49,6 +49,6 @@ http.listen(port, () => {
     logger.info('Server is running on port: ' + port)
     console.log('Server is running on port: ' + port);
 })
-console.log('I am Here!')
+console.log(`I am Here! in ${port}`)
 
 
