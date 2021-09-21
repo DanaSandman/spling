@@ -34,7 +34,6 @@ export function OrderForm() {
   const [order, setOrder] = useState(initialUserOrder);
 
   useEffect(() => {
-    console.log("order", order);
     dispatch(setOrderDetails(order));
   }, [order]);
 
@@ -76,7 +75,6 @@ export function OrderForm() {
         label="עיר"
         variant="outlined"
         name="city"
-        // value={ order.address.city }
         onChange={handleChange}
         required
       />
@@ -84,7 +82,6 @@ export function OrderForm() {
         label="רחוב"
         variant="outlined"
         name="street"
-        // value={ address.street}
         onChange={handleChange}
         required
       />
@@ -92,7 +89,6 @@ export function OrderForm() {
         label="מס בית"
         variant="outlined"
         name="number"
-        // value={ address.number}
         onChange={handleChange}
         required
       />

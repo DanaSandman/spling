@@ -59,7 +59,6 @@ export function MediaDetails() {
   useEffect(() => {
     dispatch(setMediaType(type));
     dispatch(setMediaLink(link));
-    // eslint-disable-next-line
   }, [type, link]);
 
   const handleChangeSelect = ({ target }) => {
@@ -102,7 +101,6 @@ export function MediaDetails() {
           label={`הזינו כאן ${linkType} שלכם`}
           variant="outlined"
           name="userLink"
-          // value={email}
           onChange={handleChangeLink}
           required
         />

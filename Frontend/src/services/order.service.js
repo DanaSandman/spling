@@ -23,7 +23,6 @@ export const orderService = {
 
 //CHOOSE localstorageService OR httpService
 async function saveOrder(order) {
-    console.log("service front order", order);
     // return await storageService.post(STORAGE_KEY, order);
     return httpService.post("order/", order);
 
@@ -32,14 +31,11 @@ async function updateOrder(data){
     return await httpService.put("order/",data);
 }
 async function getOrderById(orderId) {
-    console.log('front service order id', orderId);
     // return await storageService.get(STORAGE_KEY, orderId);
     return await httpService.get(`order/${orderId}`);
 }
 //API CARDCOM
 async function charge(_productName, _price, orderId) {
-    console.log('userNameuserNameuserNameuserName',userName);
-    console.log('terminalNumberterminalNumberterminalNumberterminalNumber',terminalNumber);
     const params = {
         TerminalNumber: terminalNumber,
         Operation: 1,
@@ -60,7 +56,6 @@ async function charge(_productName, _price, orderId) {
     return httpService.post(endPoint, data);
 }
 async function getPaymentDetails(lowProfileCode) {
-    console.log('getPaymentDetails order.service',lowProfileCode);
     const params = {
         TerminalNumber: 1000,
         UserName: "barak9611",

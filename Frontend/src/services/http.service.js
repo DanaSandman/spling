@@ -18,11 +18,7 @@ export const httpService = {
 }
 
 async function ajax(endpoint, method = 'GET', data = null) {
-    console.log('data', data);
-    console.log('endpoint', endpoint);
-    console.log('method', method);
     try {
-        console.log(data);
         if ( method === 'POST' & endpoint !== "order/") {
             const res = await axios({
                 url: `${endpoint}`,
@@ -30,7 +26,6 @@ async function ajax(endpoint, method = 'GET', data = null) {
                 data,
                 params: (method === 'GET') ? data : null
             })
-            console.log('res.data', res.data);
             if(method === 'POST' & endpoint === 'https://secure.cardcom.solutions/Interface/LowProfile.aspx'){
                 return resUrl(res.data)
             }
@@ -51,9 +46,6 @@ async function ajax(endpoint, method = 'GET', data = null) {
         if (err.response && err.response.status === 401) {
             // Depends on routing startegy - hash or history
             window.location.assign('/#/login')
-            // window.location.assign('/login')
-            //     router.push('/login')
-            // }
             throw err
         }
     }
