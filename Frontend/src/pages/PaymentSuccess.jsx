@@ -27,7 +27,7 @@ export function PaymentSuccess() {
   }
   return (
     <Fragment>
-      <FbPixel />
+      <FbPixel  purchase={true}/>
       <div className="payment-success-page">
         <h3>תודה שקניתם ספלינג</h3>
         <h4>{orderId} :מספר ההזמנה שלכם הוא</h4>
