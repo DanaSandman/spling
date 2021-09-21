@@ -4,7 +4,7 @@ import {
 import {
     httpService
 } from "./http.service.js";
-
+const BASE_URL = process.env.NODE_ENV === 'production' ? '//spling-touch.herokuapp.com/#/' : 'http://localhost:3000/#/'
 const STORAGE_KEY = "orders";
 
 export const orderService = {
@@ -33,7 +33,7 @@ async function getOrderById(orderId) {
 //API CARDCOM
 async function charge(_productName, _price, orderId) {
     console.log('order service orderId',orderId);
-
+    console.log('SuccessRedirectUrl ',`${BASE_URL}payment/success/${orderId}`);
     const params = {
         TerminalNumber: 1000,
         Operation: 1,
@@ -44,7 +44,7 @@ async function charge(_productName, _price, orderId) {
         ProductName: _productName,
         APILevel: 10,
         Codepage: 65001,
-        SuccessRedirectUrl: `http://localhost:3000/#/payment/success/${orderId}`,
+        SuccessRedirectUrl: `${BASE_URL}payment/success/${orderId}`,
         ErrorRedirectUrl: "http://www.ynet.co.il",
         IndicatorUrl: "http://www.site.com/hide.aspx",
     };
@@ -60,11 +60,7 @@ async function getPaymentDetails(lowProfileCode) {
         UserName: "barak9611",
         LowProfileCode : lowProfileCode
     };
-
     const data = `TerminalNumber=${params.TerminalNumber}&username=${params.UserName}&lowprofilecode=${params.LowProfileCode}`;
     const endPoint = "https://secure.cardcom.solutions/Interface/BillGoldGetLowProfileIndicator.aspx";
     return httpService.post(endPoint, data);
 }
-
-
-

@@ -4,14 +4,15 @@ import {
   Route,
   Switch,
   Redirect,
+  BrowserRouter,
 } from "react-router-dom";
-
 import { routes } from "./routes.js";
 import { Footer } from "./cmps/Footer.jsx";
 
 import "./styles/App.scss";
 
 export function App() {
+
   return (
     <Router>
       <div className="app">
@@ -25,12 +26,12 @@ export function App() {
               ></Route>
               {routes.map((route) => (
                 <Route
-                  key={route.path}
-                  exact
-                  component={route.component}
-                  path={route.path}
+                key={route.path}
+                exact 
+                component={route.component}
+                path={route.path}
                 />
-              ))}
+                ))}
             </div>
           </Switch>
         </main>

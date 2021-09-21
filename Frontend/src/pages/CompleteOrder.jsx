@@ -4,10 +4,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { orderCompleted } from "../store/action.js";
 
 import { LongTxt } from "../cmps/LongTxt.jsx";
+import { Header } from "../cmps/Header.jsx";
+import { FbPixel } from "../cmps/FbPixel.jsx";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import { Header } from "../cmps/Header.jsx";
-
 const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: "#9469dd",
@@ -44,7 +45,8 @@ export function CompleteOrder() {
 
   return (
     <Fragment>
-      <Header/>
+      <Header />
+      <FbPixel />
       <div className="complete-order flex column">
         <h3>-פרטי הזמנה</h3>
         <div className="order-details">

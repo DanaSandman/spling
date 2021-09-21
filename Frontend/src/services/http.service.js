@@ -1,7 +1,4 @@
 import axios from 'axios'
-import {
-    Payment
-} from '../pages/Payment.jsx'
 
 const BASE_URL = process.env.NODE_ENV === 'production' ? '/api/' : '//localhost:3030/api/'
 

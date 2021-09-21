@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { orderService } from "../services/order.service.js";
+import { FbPixel } from "../cmps/FbPixel.jsx";
 
 export function PaymentSuccess() {
   const { orderId } = useParams();
@@ -26,11 +27,12 @@ export function PaymentSuccess() {
   }
   return (
     <Fragment>
+      <FbPixel />
       <div className="payment-success-page">
-      <h3>תודה שקניתם ספלינג</h3>
-      <h4>{orderId} :מספר ההזמנה שלכם הוא</h4>
-      <h5>הספלינג שלכם ישלח אליכם לכתובת שציינתם בהזמנה</h5>
-      <h3>♡</h3>
+        <h3>תודה שקניתם ספלינג</h3>
+        <h4>{orderId} :מספר ההזמנה שלכם הוא</h4>
+        <h5>הספלינג שלכם ישלח אליכם לכתובת שציינתם בהזמנה</h5>
+        <h3>♡</h3>
       </div>
     </Fragment>
   );
