@@ -4,7 +4,13 @@ import {
 import {
     httpService
 } from "./http.service.js";
+
+require('dotenv').config()
+
+const userName =  process.env.REACT_APP_CARDCOME_USER_NAME
+const terminalNumber = parseInt( process.env.REACT_APP_CARDCOME_TERMINAL_NUMBER)
 const BASE_URL = process.env.NODE_ENV === 'production' ? '//spling-touch.herokuapp.com/#/' : 'http://localhost:3000/#/'
+
 const STORAGE_KEY = "orders";
 
 export const orderService = {
@@ -32,12 +38,12 @@ async function getOrderById(orderId) {
 }
 //API CARDCOM
 async function charge(_productName, _price, orderId) {
-    console.log('order service orderId',orderId);
-    console.log('SuccessRedirectUrl ',`${BASE_URL}payment/success/${orderId}`);
+    console.log('userNameuserNameuserNameuserName',userName);
+    console.log('terminalNumberterminalNumberterminalNumberterminalNumber',terminalNumber);
     const params = {
-        TerminalNumber: 1000,
+        TerminalNumber: terminalNumber,
         Operation: 1,
-        UserName: "barak9611",
+        UserName: userName,
         SumToBill: _price,
         CoinId: 1,
         Language: "he",
