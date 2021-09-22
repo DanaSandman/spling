@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: "#9469dd",
     margin: "0px",
+    color: "#fff",
   },
 }));
 
@@ -24,9 +25,11 @@ export function Order() {
       <FbPixel />
       <h3 className="order-page">פרטים למשלוח</h3>
       <OrderForm></OrderForm>
-      <Button variant="contained" className={classes.button} disableElevation>
-        <Link to="/completeorder"> 〱 רכוש עכשיו</Link>
-      </Button>
+      <Link to="/completeorder">
+        <Button variant="contained" className={classes.button} disableElevation>
+          〱 רכוש עכשיו{" "}
+        </Button>
+      </Link>
     </Fragment>
   );
 }

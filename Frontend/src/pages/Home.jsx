@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: "#9469dd",
     margin: "0px",
+    color: "#fff",
   },
 }));
 
@@ -30,9 +31,12 @@ export function Home() {
         <MediaDetails />
       </div>
       <h4 className="paragraph"> !עלות התג 49 ש״ח בלבד כולל משלוח</h4>
-      <Button className={classes.button} variant="contained" disableElevation>
-        <Link to="/order"> 〱 הזמינו עכשיו</Link>
-      </Button>
+
+      <Link to="/order">
+        <Button className={classes.button} variant="contained" disableElevation>
+          〱 הזמינו עכשיו
+        </Button>
+      </Link>
     </Fragment>
   );
 }

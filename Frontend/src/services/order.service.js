@@ -57,8 +57,8 @@ async function charge(_productName, _price, orderId) {
 }
 async function getPaymentDetails(lowProfileCode) {
     const params = {
-        TerminalNumber: 1000,
-        UserName: "barak9611",
+        TerminalNumber: terminalNumber,
+        UserName: userName,
         LowProfileCode : lowProfileCode
     };
     const data = `TerminalNumber=${params.TerminalNumber}&username=${params.UserName}&lowprofilecode=${params.LowProfileCode}`;

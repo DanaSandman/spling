@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: "#9469dd",
     margin: "0px",
+    color: "#fff",
   },
 }));
 
@@ -62,9 +63,11 @@ export function CompleteOrder() {
           <LongTxt description={address} />
         </div>
       </div>
-      <Button variant="contained" className={classes.button} disableElevation>
-        <Link to="/payment"> 〱 מעבר לתשלום</Link>
-      </Button>
+      <Link to="/payment">
+        <Button variant="contained" className={classes.button} disableElevation>
+          〱 מעבר לתשלום
+        </Button>
+      </Link>
     </Fragment>
   );
 }
