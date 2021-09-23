@@ -5,12 +5,6 @@ import {
     httpService
 } from "./http.service.js";
 
-require('dotenv').config()
-
-const userName =  process.env.REACT_APP_CARDCOME_USER_NAME
-const terminalNumber = parseInt( process.env.REACT_APP_CARDCOME_TERMINAL_NUMBER)
-const BASE_URL = process.env.NODE_ENV === 'production' ? '//spling-touch.herokuapp.com/#/' : 'http://localhost:3000/#/'
-
 const STORAGE_KEY = "orders";
 
 export const orderService = {
@@ -27,8 +21,8 @@ async function saveOrder(order) {
     return httpService.post("order/", order);
 
 }
-async function updateOrder(data){
-    return await httpService.put("order/",data);
+async function updateOrder(data) {
+    return await httpService.put("order/", data);
 }
 async function getOrderById(orderId) {
     // return await storageService.get(STORAGE_KEY, orderId);
@@ -36,32 +30,25 @@ async function getOrderById(orderId) {
 }
 //API CARDCOM
 async function charge(_productName, _price, orderId) {
-    const params = {
-        TerminalNumber: terminalNumber,
-        Operation: 1,
-        UserName: userName,
-        SumToBill: _price,
-        CoinId: 1,
-        Language: "he",
-        ProductName: _productName,
-        APILevel: 10,
-        Codepage: 65001,
-        SuccessRedirectUrl: `${BASE_URL}payment/success/${orderId}`,
-        ErrorRedirectUrl: "http://www.ynet.co.il",
-        IndicatorUrl: "http://www.site.com/hide.aspx",
-    };
-
-    const data = `TerminalNumber=${params.TerminalNumber}&Operation=1&UserName=${params.UserName}&SumToBill=${params.SumToBill}&CoinId=${params.CoinId}&Language=${params.Language}&ProductName=${params.ProductName}&APILevel=10&Codepage=65001&SuccessRedirectUrl=${params.SuccessRedirectUrl}&ErrorRedirectUrl=${params.ErrorRedirectUrl}&IndicatorUrl=http://www.site.com/hide.aspx`;
-    const endPoint = "https://secure.cardcom.solutions/Interface/LowProfile.aspx";
-    return httpService.post(endPoint, data);
+    const data = {
+        _productName,
+        _price,
+        orderId
+    }
+    console.log('data charge front', data);
+    const transaction =  await httpService.put("payment/", data)
+    return resUrl(transaction)
 }
 async function getPaymentDetails(lowProfileCode) {
-    const params = {
-        TerminalNumber: terminalNumber,
-        UserName: userName,
-        LowProfileCode : lowProfileCode
-    };
-    const data = `TerminalNumber=${params.TerminalNumber}&username=${params.UserName}&lowprofilecode=${params.LowProfileCode}`;
-    const endPoint = "https://secure.cardcom.solutions/Interface/BillGoldGetLowProfileIndicator.aspx";
-    return httpService.post(endPoint, data);
+    return httpService.post("payment/", lowProfileCode)
+}
+//CLEAN RES
+function resUrl(data) {
+    const urlStart = data.indexOf("&url=")
+    const urlEnd = data.indexOf("&", urlStart + 1)
+    const fullUrl = data.substr(urlStart + 5, (urlEnd - (urlStart + 5)));
+    return replace(fullUrl)
+}
+function replace(data) {
+    return data.replaceAll("%2f", "/").replaceAll("%3f", "?").replaceAll("%3a", ":").replaceAll("%3d", "=");
 }

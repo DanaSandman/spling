@@ -34,7 +34,9 @@ if (process.env.NODE_ENV === 'production') {
 
 //ROUTES
 const orderRoutes = require('./api/order/order.routes')
+const paymentRoutes = require('./api/payment/payment.routes')
 app.use('/api/order', orderRoutes)
+app.use('/api/payment', paymentRoutes)
 
 //If no routes get the HTML from public
 app.get('/**', (req, res) => {

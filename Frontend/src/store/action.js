@@ -42,7 +42,10 @@ export function orderCompleted(orderDetails) {
     return async dispatch => {
         try {
             const orderId = await orderService.saveOrder(orderDetails);
+            console.log('orderId action',orderId);
+
             const cardComLink = await orderService.charge('spling', 1, orderId);
+            
             const lowProfile = getLowProfileCode(cardComLink);
             orderService.updateOrder({
                 orderId,
