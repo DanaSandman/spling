@@ -1,6 +1,12 @@
 .payment-success-page{
     margin-top: 2.3rem;
 }
-
+.link-to-pay, .link-to-pay:active {
+    color: $clr1;
+    font-weight: bolder;
+}
+.payment-failed-page{
+    margin-top: 2rem;
+}
 
   

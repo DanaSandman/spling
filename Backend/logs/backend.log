@@ -599,3 +599,27 @@
 9/24/2021, 1:08:48 AM - INFO - Server is running on port: 3030 
 9/24/2021, 1:10:31 AM - INFO - Server is running on port: 3030 
 9/24/2021, 1:25:27 AM - INFO - Server is running on port: 3030 
+9/24/2021, 8:37:59 PM - INFO - Server is running on port: 3030 
+9/24/2021, 8:41:10 PM - INFO - Server is running on port: 3030 
+9/25/2021, 8:37:58 PM - ERROR - cannot insert order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:37:58 PM - ERROR - Failed to add order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:38:14 PM - ERROR - cannot insert order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:38:14 PM - ERROR - Failed to add order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:38:28 PM - ERROR - cannot insert order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:38:28 PM - ERROR - Failed to add order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:38:44 PM - ERROR - cannot insert order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:38:44 PM - ERROR - Failed to add order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:39:14 PM - ERROR - cannot insert order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:39:14 PM - ERROR - Failed to add order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:39:44 PM - ERROR - cannot insert order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:39:44 PM - ERROR - Failed to add order | MongoServerSelectionError: connection timed out 
+9/25/2021, 8:42:08 PM - INFO - Server is running on port: 3030 
+9/25/2021, 8:45:55 PM - ERROR - cannot insert order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 8:45:55 PM - ERROR - Failed to add order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 8:45:55 PM - ERROR - cannot insert order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 8:45:55 PM - ERROR - Failed to add order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 8:46:38 PM - ERROR - cannot insert order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 8:46:38 PM - ERROR - Failed to add order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 8:46:38 PM - ERROR - cannot insert order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 8:46:38 PM - ERROR - Failed to add order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
+9/25/2021, 11:29:23 PM - INFO - Server is running on port: 3030 

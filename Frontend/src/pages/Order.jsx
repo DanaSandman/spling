@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
+import arrowIcon from "../assets/img/leftarrowicon.png";
 import { OrderForm } from "../cmps/OrderForm.jsx";
 import { Header } from "../cmps/Header.jsx";
 import { FbPixel } from "../cmps/FbPixel.jsx";
@@ -15,19 +16,17 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
 }));
-
 export function Order() {
   const classes = useStyles();
-
   return (
     <Fragment>
       <Header />
       <FbPixel />
-      <h3 className="order-page">פרטים למשלוח</h3>
+      <h3 className="order-page">פרטי המזמין/ה</h3>
       <OrderForm></OrderForm>
       <Link to="/completeorder">
         <Button variant="contained" className={classes.button} disableElevation>
-          〱 רכוש עכשיו{" "}
+        <img src={arrowIcon} className="arrow-icon" alt="arrow-icon" /> אישור הזמנה
         </Button>
       </Link>
     </Fragment>

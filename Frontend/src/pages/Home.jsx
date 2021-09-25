@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
+import arrowIcon from "../assets/img/leftarrowicon.png";
 import TapTouchImg from "../assets/img/TapTouch.jpg";
 import { Header } from "../cmps/Header.jsx";
 import { FbPixel } from "../cmps/FbPixel.jsx";
@@ -34,7 +35,8 @@ export function Home() {
 
       <Link to="/order">
         <Button className={classes.button} variant="contained" disableElevation>
-          〱 הזמינו עכשיו
+          <img src={arrowIcon} className="arrow-icon" alt="arrow-icon" /> הזמינו
+          עכשיו
         </Button>
       </Link>
     </Fragment>

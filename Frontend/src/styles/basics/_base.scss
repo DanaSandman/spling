@@ -36,11 +36,7 @@ p {
   margin: 0;
 }
 a {
-  color: $clr5;
   text-decoration: none;
-}
-a:hover {
-  color: rgba(255, 255, 255, 0.741);
 }
 input,
 select,
@@ -56,4 +52,11 @@ iframe{
 .MuiButton-root{
   max-width: 340px;
   min-height: 57px;
+}
+iframe{
+  border: none;
+  width: 90%;
+}
+.arrow-icon{
+  margin-right: 20px;
 }

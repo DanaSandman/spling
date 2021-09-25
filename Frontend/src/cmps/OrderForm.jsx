@@ -23,7 +23,7 @@ export function OrderForm() {
   const dispatch = useDispatch();
   const initialUserOrder = {
     fullName: "",
-    phoneNumber: 0,
+    phoneNumber: "",
     email: "",
     address: {
       city: "",

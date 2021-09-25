@@ -20,7 +20,7 @@ async function makeTransaction(transactionData) {
         APILevel: 10,
         Codepage: 65001,
         SuccessRedirectUrl: `${BASE_URL}payment/success/${orderId}`,
-        ErrorRedirectUrl: "http://www.ynet.co.il",
+        ErrorRedirectUrl: `${BASE_URL}payment/failed`,
         IndicatorUrl: "http://www.site.com/hide.aspx",
     };
     const data = `TerminalNumber=${parameters.TerminalNumber}&Operation=1&UserName=${parameters.UserName}&SumToBill=${parameters.SumToBill}&CoinId=${parameters.CoinId}&Language=${parameters.Language}&ProductName=${parameters.ProductName}&APILevel=10&Codepage=65001&SuccessRedirectUrl=${parameters.SuccessRedirectUrl}&ErrorRedirectUrl=${parameters.ErrorRedirectUrl}&IndicatorUrl=http://www.site.com/hide.aspx`;
@@ -61,3 +61,4 @@ module.exports = {
     makeTransaction,
     getDetails
 }
+// SumToBill: _price,

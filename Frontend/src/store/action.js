@@ -44,7 +44,7 @@ export function orderCompleted(orderDetails) {
             const orderId = await orderService.saveOrder(orderDetails);
             console.log('orderId action',orderId);
 
-            const cardComLink = await orderService.charge('spling', 1, orderId);
+            const cardComLink = await orderService.charge('spling', 49, orderId);
             
             const lowProfile = getLowProfileCode(cardComLink);
             orderService.updateOrder({

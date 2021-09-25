@@ -3,6 +3,7 @@ import { Order } from "./pages/Order.jsx";
 import { CompleteOrder } from "./pages/CompleteOrder.jsx";
 import { Payment } from "./pages/Payment.jsx";
 import { PaymentSuccess } from "./pages/PaymentSuccess.jsx";
+import { PaymentFailed } from "./pages/PaymentFailed.jsx"
 
 export const routes = [
   {
@@ -20,6 +21,10 @@ export const routes = [
   {
     path: "/payment/success/:orderId",
     component: PaymentSuccess,
+  },
+  {
+    path: "/payment/failed",
+    component: PaymentFailed,
   },
   {
     path: "/payment",

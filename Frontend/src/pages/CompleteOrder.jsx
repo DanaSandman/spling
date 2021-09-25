@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { orderCompleted } from "../store/action.js";
 
+import arrowIcon from "../assets/img/leftarrowicon.png";
 import { LongTxt } from "../cmps/LongTxt.jsx";
 import { Header } from "../cmps/Header.jsx";
 import { FbPixel } from "../cmps/FbPixel.jsx";
@@ -49,7 +50,7 @@ export function CompleteOrder() {
       <Header />
       <FbPixel />
       <div className="complete-order flex column">
-        <h3>-פרטי הזמנה</h3>
+        <h3>פרטי הזמנה</h3>
         <div className="order-details">
           <h4>{currOreder.mediaType} :סוג הלינק</h4>
           <p className="link-to-order">:כתובת הלינק</p>
@@ -59,13 +60,13 @@ export function CompleteOrder() {
           <h4> שם מלא: {currOreder.orderDetails.fullName}</h4>
           <h4>{currOreder.orderDetails.phoneNumber} :טלפון</h4>
           <h4>{currOreder.orderDetails.email} :אימייל</h4>
-          <h3>-כתובת למשלוח</h3>
+          <h3>כתובת למשלוח</h3>
           <LongTxt description={address} />
         </div>
       </div>
       <Link to="/payment">
         <Button variant="contained" className={classes.button} disableElevation>
-          〱 מעבר לתשלום
+        <img src={arrowIcon} className="arrow-icon" alt="arrow-icon" /> מעבר לתשלום
         </Button>
       </Link>
     </Fragment>
