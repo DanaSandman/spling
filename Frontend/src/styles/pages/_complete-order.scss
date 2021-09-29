@@ -1,9 +1,10 @@
 .complete-order{
     margin-top: 1.25rem;
    padding-left: 1.25rem;
-    width: 95%;
     height: 65vh;
     text-align: end;
+    width: inherit;
+    margin-right: 15px;
 }
 .user-details, .order-details{
     border: 1px solid $clr1;

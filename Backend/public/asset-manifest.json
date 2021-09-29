@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.e8fa4a6e.chunk.css",
+    "main.css": "/static/css/main.83c85027.chunk.css",
     "main.js": "/static/js/main.4f9820d7.chunk.js",
     "main.js.map": "/static/js/main.4f9820d7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9e91c9f9.js",
@@ -12,7 +12,7 @@
     "static/js/4.3709bee5.chunk.js": "/static/js/4.3709bee5.chunk.js",
     "static/js/4.3709bee5.chunk.js.map": "/static/js/4.3709bee5.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.e8fa4a6e.chunk.css.map": "/static/css/main.e8fa4a6e.chunk.css.map",
+    "static/css/main.83c85027.chunk.css.map": "/static/css/main.83c85027.chunk.css.map",
     "static/js/2.a3a4ae4e.chunk.js.LICENSE.txt": "/static/js/2.a3a4ae4e.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/static/media/Heebo-Light.33d8c50b.ttf",
     "static/media/TapTouch.34961303.jpg": "/static/media/TapTouch.34961303.jpg"
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.9e91c9f9.js",
     "static/js/2.a3a4ae4e.chunk.js",
-    "static/css/main.e8fa4a6e.chunk.css",
+    "static/css/main.83c85027.chunk.css",
     "static/js/main.4f9820d7.chunk.js"
   ]
 }

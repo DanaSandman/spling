@@ -623,3 +623,5 @@
 9/25/2021, 8:46:38 PM - ERROR - cannot insert order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
 9/25/2021, 8:46:38 PM - ERROR - Failed to add order | Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.cz3fi.mongodb.net 
 9/25/2021, 11:29:23 PM - INFO - Server is running on port: 3030 
+9/26/2021, 5:37:29 PM - INFO - Server is running on port: 3030 
+9/29/2021, 2:25:40 PM - INFO - Server is running on port: 3030 
